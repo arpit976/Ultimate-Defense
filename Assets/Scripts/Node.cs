@@ -56,6 +56,11 @@ public class Node : MonoBehaviour {
 			Debug.Log("Not enough money to build that!");
 			return;
 		}
+		if(PlayerStats.Turrents >= buildManager.MaxTurrents)
+		{
+            Debug.Log("You Cannot Build more then " + buildManager.MaxTurrents +" Turrents");
+            return;
+        }
 
 		PlayerStats.Money -= blueprint.cost;
 
@@ -63,8 +68,9 @@ public class Node : MonoBehaviour {
 		turret = _turret;
 
 		turretBlueprint = blueprint;
+		PlayerStats.Turrents += 1;
 
-		GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
 		Destroy(effect, 5f);
 
 		Debug.Log("Turret build!");

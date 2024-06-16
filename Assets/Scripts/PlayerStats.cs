@@ -9,7 +9,10 @@ public class PlayerStats : MonoBehaviour {
 	public static int Lives;
 	public int startLives = 20;
 
-	public static int Rounds;
+    public static int Turrents;
+    public int turrents = 7;
+
+    public static int Rounds;
 
 	void Start ()
 	{
