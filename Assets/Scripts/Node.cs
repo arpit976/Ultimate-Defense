@@ -56,11 +56,11 @@ public class Node : MonoBehaviour {
 			Debug.Log("Not enough money to build that!");
 			return;
 		}
-		if(PlayerStats.Turrents >= buildManager.MaxTurrents)
+		/*if(PlayerStats.Turrents >= buildManager.MaxTurrents)
 		{
             Debug.Log("You Cannot Build more then " + buildManager.MaxTurrents +" Turrents");
             return;
-        }
+        }*/
 
 		PlayerStats.Money -= blueprint.cost;
 

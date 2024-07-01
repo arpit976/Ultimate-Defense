@@ -13,19 +13,19 @@ public class Shop : MonoBehaviour {
 		buildManager = BuildManager.instance;
 	}
 
-	public void SelectStandardTurret ()
+	public void OnSelectStandardTurret ()
 	{
 		Debug.Log("Standard Turret Selected");
 		buildManager.SelectTurretToBuild(standardTurret);
 	}
 
-	public void SelectMissileLauncher()
+	public void OnSelectMissileLauncher()
 	{
 		Debug.Log("Missile Launcher Selected");
 		buildManager.SelectTurretToBuild(missileLauncher);
 	}
 
-	public void SelectLaserBeamer()
+	public void OnSelectLaserBeamer()
 	{
 		Debug.Log("Laser Beamer Selected");
 		buildManager.SelectTurretToBuild(laserBeamer);
