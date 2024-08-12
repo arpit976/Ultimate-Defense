@@ -51,7 +51,8 @@ public class Node : MonoBehaviour {
 
 	void BuildTurret (TurretBlueprint blueprint)
 	{
-		if (PlayerStats.Money < blueprint.cost)
+        QuestManager.instance?.Task2();
+        if (PlayerStats.Money < blueprint.cost)
 		{
 			Debug.Log("Not enough money to build that!");
 			return;

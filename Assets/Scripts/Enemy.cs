@@ -45,7 +45,8 @@ public class Enemy : MonoBehaviour {
 
 	void Die ()
 	{
-		isDead = true;
+        QuestManager.instance?.Task3();
+        isDead = true;
 
 		PlayerStats.Money += worth;
 
